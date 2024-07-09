@@ -1,0 +1,17 @@
+---
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import EmailIcon from '../icons/Email.astro';
+import PhoneIcon from '../icons/Phone.astro';
+---
+
+<article class="flex flex-col md:flex-row items-center justify-center gap-8 pt-6">
+    <div class="border border-white/10 p-4 rounded">
+        <ul class="flex flex-col gap-4">            
+            <li class="flex gap-2 hover:text-purple-400 hover:text-lg"><EmailIcon class="inline size-6"/><a href="mailto:hanangabarron@gmail.com" target="_blank" rel="noopener ">hanangabarron@gmail.com</a></li>
+            <li class="flex gap-2 hover:text-purple-400 hover:text-lg"><PhoneIcon class="inline size-6"/>+34 697809866</li>
+            <li class="flex gap-2 hover:text-purple-400 hover:text-lg"><LinkedInIcon class="inline size-6"/><a href="https://www.linkedin.com/in/hanangabarron" target="_blank" rel="noopener">Linkedin</a></li>
+        </ul>
+
+    </div>
+    <img src="/public/fotoPortfolio.webp" alt="Hanan Gabarrón Kalito" width="175" height="175 " class="rounded">
+</article>

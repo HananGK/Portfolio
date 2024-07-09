@@ -1,0 +1,57 @@
+---
+import CodeIcon from "../icons/Code.astro";
+import LinkIcon from "../icons/Link.astro";
+import SocialPills from "./SocialPill.astro";
+
+const PROJECTS = [
+  {
+    title: "Países del mundo",
+    description:
+      "Proyecto realizado usando JavaScript, algo de HTML y CSS que consiste en una app creada desde cero que muestra datos de países del mundo mediante llamadas ajax a una API.",
+    code: "https://github.com/HananGK/Proyecto-paises",
+    link: "http://82.223.202.137/hannan/",
+    image: "/projects/paisesProyecto.webp",
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, link, code }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={`Captura de pantalla del proyecto ${title}`}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-semibold text-purple-300 mb-2">{title}</h3>
+          <div class="flex flex-wrap mt-2">
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {code && (
+                <SocialPills href={code}>
+                  <CodeIcon class="size-6" />
+                  Code
+                </SocialPills>
+              )}
+              {link && (
+                <SocialPills href={link}>
+                  <LinkIcon class="size-4" />
+                  Preview
+                </SocialPills>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+  <p class="text-center">Más proyectos y código en <a href="https://github.com/HananGK" target="_blank" rel="noopener noreferrer" class="text-purple-400">GitHub</a></p>
+</div>
