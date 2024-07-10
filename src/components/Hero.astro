@@ -1,0 +1,36 @@
+---
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import EmailIcon from '../icons/Email.astro';
+import CVIcon from '../icons/CV.astro';
+---
+
+<div class="flex flex-row gap-x-4">
+    <img class="rounded-full size-20 mb-4 ring-2 ring-purple-400" src="https://media.licdn.com/dms/image/D4D03AQEPD7tx5LYBuQ/profile-displayphoto-shrink_400_400/0/1710002247876?e=2147483647&v=beta&t=a3psjkCti4iY6A5K1BTUJJF7N8PQ9Catsx7NIPyqU0M" alt="Hanan Gabarron photo" />
+    
+</div>
+<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold ">Hanan Gabarrón Kalito </h1>
+<a href="https://linkedin.com/in/hanangabarron" target="_blank" rel="noopener"><Badge>Disponible para trabajar</Badge></a>
+<h2 class="text:xl lg:text-2xl opacity-80 text-wrap max-w-[700px] mt-6 text-pretty"><span class="font-bold text-purple-400">Web Developer Junior</span>, enfocándome en el <span class="underline">Front-end</span>. Actualmente dándole caña a <span class="font-bold text-purple-200">React</span>, superándome día a día. De Algeciras (Cádiz), España  <img class="w-8 h-6 inline" src='https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg' alt="Spain flag"/></h2>
+
+
+<nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill href="https://linkedin.com/in/hanangabarron">
+        <LinkedInIcon class="size-4 md:size-6" />
+        LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/HananGK">
+        <GitHubIcon class="size-4 md:size-6" />
+        GitHub
+    </SocialPill>
+    <SocialPill href="mailto:hanangabarron@gmail.com">
+        <EmailIcon class="size-4 md:size-6" />
+        hanangabarron@gmail.com
+    </SocialPill>
+    <SocialPill href="/CVHananGK.pdf">
+        <CVIcon class="size-4 md:size-6" />
+        CV
+    </SocialPill>
+</nav>
