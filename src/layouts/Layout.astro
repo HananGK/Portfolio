@@ -24,6 +24,12 @@ const { description,title } = Astro.props;
 		<link rel="manifest" href="/site.webmanifest">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://portfolio-hanangk.vercel.app/" />
+		<meta property="og:image" content="https://portfolio-hanangk.vercel.app/ruta/a-la-imagen.jpg" />
 	</head>
 	<body>
 		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 [background:radial-gradient(125%_125%_at_50%_10%,#703df669_20%,#181818_70%)]"></div>
